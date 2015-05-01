@@ -4,7 +4,6 @@ require 'streamio-ffmpeg'
 require 'securerandom'
 require 'fileutils'
 require 'net/http'
-require './lib/http'
 
 module Obtain
 
