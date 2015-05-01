@@ -28,7 +28,7 @@ module Obtain
       }
     }
 
-    path
+    File.realpath(path)
   end
 
   def self.establish_connection
