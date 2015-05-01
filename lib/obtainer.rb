@@ -1,9 +1,10 @@
-require "obtain/version"
+require "obtainer/version"
 require 'rubygems'
 require 'streamio-ffmpeg'
 require 'securerandom'
 require 'fileutils'
 require 'net/http'
+require 'obtainer/http'
 
 module Obtain
 
