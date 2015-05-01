@@ -1,6 +1,5 @@
 require "obtainer/version"
 require 'rubygems'
-require 'streamio-ffmpeg'
 require 'securerandom'
 require 'fileutils'
 require 'net/http'
@@ -10,8 +9,7 @@ module Obtain
 
   def self.url_to_dir(url, dir)
     path = self.generate_location(dir)
-    file_path = self.fetch(url, path)
-    self.metadata(file_path)
+    self.fetch(url, path)
   end
 
   def self.fetch(url, path)
@@ -31,11 +29,6 @@ module Obtain
     }
 
     path
-  end
-
-  def self.metadata(path)
-    meta = FFMPEG::Movie.new(path)
-    meta
   end
 
   def self.establish_connection
